@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" href="./index.js"></script>
+</head>
+
+<body>
+    <style>
+        * {
+            font-family:'Courier New', Courier, monospace;
+        }
+    </style>
+   <h1 id="demo" style="text-align: center;">Increment Value By Using Closure</h1>
+   
+<script>
+  for(i = 0; i < 5; i++) {
+    setTimeout((function outer(i) {
+        return function inner() {
+            console.log(i);
+        }
+    })(i), 3000)
+  }
+</script>
+</body>
+
+</html>

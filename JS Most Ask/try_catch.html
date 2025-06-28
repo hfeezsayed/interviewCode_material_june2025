@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" href="./index.js"></script>
+</head>
+
+<body>
+   <p id="demo">Bismillah</p>
+   <p id="demo"></p>
+<script>
+  //TRY and CATCH 
+  //TRY is used to test a block of code for errors
+  //Catch is used to handle the errors
+  //We can't use setTimeout inside of try and catch bcoz try and catch is synchronous.
+  //While setTimeout is asynchronus but we can use try and catch inside of setTimeout.
+  
+  //Example 1
+  try {
+    addalert("Welcome Guest!");
+  } catch(err) {
+    console.log(err.name)
+    console.log(err.message)
+    console.log(err.stack)
+  } // reference error addalert is not defined
+
+
+
+//Variable Typing - It is used to assign a number to a variable and then string assign to the same variable
+//called variable typing
+// var a = 2;
+// console.log(a)
+// a = "Hafeez";
+// console.log(a)
+
+</script>
+</body>
+
+</html>

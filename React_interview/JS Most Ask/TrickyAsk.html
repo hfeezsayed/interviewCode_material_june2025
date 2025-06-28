@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript" href="./index.js"></script>
+  </head>
+
+  <body>
+    <style>
+      * {
+        font-family: "Courier New", Courier, monospace;
+      }
+    </style>
+    <h1 id="demo" style="text-align: center">Tricky Ask Example</h1>
+
+    <script>
+      //1.
+      a();
+      function a() {
+        console.log("a"); // "a" becoz function and varriable are hoisted
+      }
+
+      //hfkdfh
+      b();
+      var b = function () {
+        console.log("b"); // b is not a function bcoz function is stored in b while stored function are not hoisted in js
+      };
+
+      //2.
+      var a;
+      function myFunction() {
+        return (a = 2);
+      }
+      myFunction(); //2
+      //Note for example 2
+      //When we do assignments without declarations in JavaSacript (a=2), the compiler will save
+      //the variable in the global scope. That’s why the output is 2.
+      //You can avoid this behavior if you want, by using the strict mode "use strict”.
+
+      //3.
+      var a = 1;
+      function foo() {
+        var a = 2;
+        console.log(a); //2 becoz this is local scope variable
+      }
+      foo();
+      console.log(a); //1 it is the global variable
+      // so first output would be 2 and second is one.
+
+      //4.
+      functionExpression(); // TypeError: functionExpression is not a function.
+      const functionExpression = function () {
+        console.log("Not Hoisted"); // functionExpression is not access before initilization.
+      }; // note - functionExpression is not hoisted in javascript.
+
+      //5.
+      console.log(y);
+      y = 1; // Reference error - y is not defined
+
+      //6.
+      console.log(y); // undefined
+      var y = 2;
+
+      //7.
+      y = 3;
+      console.log(y); // 3
+      var y;
+
+      //8.
+      var z = 1;
+      let z;
+      console.log(z); // Z has been already declared
+
+      //9.
+      //How to find the number is an integer?
+      var a = 22;
+      var b = "22";
+      var c = -2.2;
+      console.log(Number.isInteger(a));
+      console.log(Number.isInteger(b));
+      console.log(Number.isInteger(c));
+
+      //10.
+      //1.
+      for (var i = 0; i < 4; i++) {
+        setTimeout(() => console.log(i), 0);
+      } //4 4 4 4 with var
+      //2.
+      for (let i = 0; i < 4; i++) {
+        setTimeout(() => console.log(i), 0);
+      } //0 1 2 3 with let
+
+      //________________________________________;
+
+      //1.
+      a = 15;
+      console.log(a); //15 this is the hoisting concept where var during the compilation move to top of the current scope
+      var a;
+
+      //2.
+      console.log(0.1 + 0.2 === 0.3); //false
+      //becoz 0.1+0.2 is not equal to 0.3 becoz this is the floating point procedure so it will be
+      //0.3 upto 16 digits that's the reason.
+
+      //3.
+      console.log(0015); //13 becoz it will provide the octal representation after or eual 10
+      //that would be 8 ex 0010 = 8, 0012 = 10; so 2 would be minus from current digit
+
+      //5.
+      let a = [1, 2, 3, 4, 5];
+      function arrValue(b, ...a) {
+        console.log(a);
+      }
+      arrValue(6, 7, 8, 0); //6 goes into b and rest into a so output will be 7,8,0
+
+      //6.
+      var a;
+      console.log(a); //undefined - bcoz variable has been declared but there is no value has been assigned to it
+      a = 3; //if add a=3 after console then also be output undefined so it should be above console then output wl b 3
+
+      //7. sort array
+      var a = [2, 5, 9, 7, 4, 1, 8];
+      console.log(a.sort()); //ascending order
+      const b = a.sort();
+      console.log(b.reverse()); //descending order
+
+      //8.
+      const person = {
+        name: "Radha",
+        tech: {
+          name: "React JS",
+          exp: "YRS",
+        },
+      };
+      const newPerson = { ...person };
+      newPerson.tech.name = "Node jS";
+      console.log(person.tech.name); //node JS - bcoz the memory location is the same and we have assign person into
+      //newPerson and spread operator won't create a new refrence on same memory location.
+    </script>
+  </body>
+</html>

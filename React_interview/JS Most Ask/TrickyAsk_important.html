@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript" href="./index.js"></script>
+  </head>
+
+  <body>
+    <script>
+      //  1.
+      console.log(2 + true);
+      //Explanation above example: The output will be 3. Explanation: When JavaScript encounters a + operator
+      //with a number and a boolean, it automatically converts the boolean to its numeric equivalent (true becomes 1).
+      //Therefore, the expression becomes 2 + 1, which evaluates to 3.
+
+      //2.
+      console.log(NaN === NaN); //false
+      //Explanation above example: Explanation: NaN (Not a Number) is a special numeric value in JavaScript,
+      //and interestingly, NaN is not equal to itself. Therefore, the expression NaN === NaN evaluates to false.
+
+      //3.
+      console.log("5" - -"3");
+      // The output will be 8. Explanation: The unary - operator can be used to convert a string to a number.
+      // In this case, - '3' converts the string '3' to the number -3. Then, the expression becomes '5' - (-3),
+      // which is equivalent to '5' + 3. JavaScript performs string concatenation since one of the operands is a string,
+      // resulting in the string '53'. Finally, the result is converted to a number, yielding 8.
+
+      //4.
+      console.log(null == undefined);
+      // The output will be true. Explanation: In JavaScript, null and undefined are considered equal only
+      // when using loose equality (==). Therefore, null == undefined evaluates to true.
+
+      //5.
+      console.log("B" - "A"); //NaN
+      console.log("2" - 2); //0 bcoz minus - operator convert string into number.
+      console.log("2" + 2); //22
+    </script>
+  </body>
+</html>

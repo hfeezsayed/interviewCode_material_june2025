@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FInd longest word in the string</title>
+
+    <script>
+      //find the longest word
+      let x = "This is a newly married couple";
+      function myFunc(str) {
+        str = str.split(" ");
+        return str.sort((a, b) => b.length - a.length)[0];
+      }
+      console.log(myFunc(x));
+    </script>
+
+    <script>
+      //find the shortest word
+      let str = "This is a newly married couple";
+      function myFunc(x) {
+        x = x.split(" ");
+        return x.sort((a, b) => b.length - a.length)[0];
+      }
+      console.log(myFunc(str));
+    </script>
+  </head>
+  <body></body>
+</html>

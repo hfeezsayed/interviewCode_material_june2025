@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" href="./index.js"></script>
+</head>
+
+<body>
+   <p id="demo">Bismillah</p>
+<script>
+  //MAP method
+  function triple(n){
+	return n*3; }	
+arr = new Array(1, 2, 3, 6, 5, 4);
+var new_arr = arr.map(triple)
+console.log(new_arr);
+
+
+ //Reduce method
+ function product(a, b){
+	return a * b; }
+arr = new Array(1, 2, 3, 6, 5, 4);
+var product_of_arr = arr.reduce(product)
+console.log(product_of_arr)
+
+
+//filter method
+arr = new Array(1, 2, 3, 6, 5, 4);
+var new_arr = arr.filter(function (x){
+	return x % 2==0;
+});
+console.log(new_arr)
+
+
+
+//find no-repeat string in javascript?
+let str = 'abcab'
+function nonrepeate(str){
+    for (let i=0; i<str.length; i++){
+      let j = str.charAt(i)
+    if (str.indexOf(j)===str.lastIndexOf(j)){
+     return j
+     }
+   }
+ }
+ console.log(nonrepeate(str))
+
+
+
+ //how we can display numbers after every second?
+ const counter=(n)=>{
+    for(let i=1; i<=n; i++){
+        setTimeout(()=>{
+            console.log(i)
+        },i * 1000)
+    }
+}
+counter(10);
+
+
+
+//How to get specific name from array with object
+let arr = [{name:"Ketaki"},{name:"Pooja"},{name:"Suhas"},{name:"Pallavi"}]
+let getArr = arr.find((item) => item.name === 'Pooja');
+console.log(getArr)
+
+
+//How to find conditional data from array object
+let arr1 = [
+  {name:"Ketaki", age: 25},
+  {name:"Pooja", age: 31},
+  {name:"Suhas", age: 22},
+  {name:"Pallavi", age: 15}
+]
+let getArr1 = arr1.filter((item) => item.age > 20);
+console.log(getArr1)
+
+</script>
+</body>
+
+</html>

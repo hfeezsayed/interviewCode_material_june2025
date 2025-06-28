@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" href="./index.js"></script>
+</head>
+
+<body>
+    <style>
+        * {
+            font-family:'Courier New', Courier, monospace;
+        }
+    </style>
+   <h1 id="demo" style="text-align: center;">How To Use Higher Order Function</h1>
+   
+<script>
+//A “higher-order function” is a function that accepts functions as parameters and/or returns a function
+
+//ex-1
+const higherOrder = (name) => {
+   if(name === 'Hafeez') {
+     return function(topic) {
+        console.log(`My Name is ${name} and I am ${topic}`);
+     }
+   }
+}
+higherOrder('Hafeez')('Software Engineer')
+
+
+//ex-2
+// Suppose we want to add 10 to every element in a array. 
+// We can use the map() method to map over every element in the array to add 10 to it.
+const arr = [1, 2, 3, 4, 5];
+const output = arr.map((num) => num += 10)
+console.log(arr); // [1, 2, 3, 4, 5]
+console.log(output); // [11, 12, 13, 14, 15]
+
+
+
+//higher order example
+const num = [10, 20, 30];
+const num10 = num.map(i => i * 2);
+console.log(num10);
+</script>
+</body>
+
+</html>

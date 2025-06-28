@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" href="./index.js"></script>
+</head>
+
+<body>
+   <p id="demo"></p>
+   
+<script>
+  //console.log(0.1 + 0.2) // 0.30000000004
+  //console.log(0.1 + 0.2 == 0.3) // false
+
+  // (function() {
+  //   console.log(1);
+  //   setTimeout(function(){ 
+  //     console.log(2)
+  //   }, 2000)
+  //   setTimeout(function() {
+  //     console.log(3)
+  //   }, 0)
+  //   console.log(4)
+  // })()
+
+  //number swapping
+  // var a = "Javascript";
+  // var b = "HTML";
+  // [a, b] = [b, a];
+  // console.log("a =", a, "b =", b)
+
+
+  //sort array without using sort method
+  // var arr = [5, 10, 2, 9, 1, 30, 15];
+  // for(i = 0; i < arr.length; i++) {
+  //   for(j = i + 1; j < arr.length; j++) {
+  //     if(arr[i] > arr[j]) {
+  //       temp = arr[i];
+  //       arr[i] = arr[j];
+  //       arr[j] = temp;
+  //     }
+  //   }
+  // }
+  // console.log(arr)
+
+  
+  //sorting using sort method
+  // var arr = [8, 30, 15, 90, 2, 4, 1, 12];
+  // let z = arr.sort(function(a, b) {return a - b});
+  // console.log(z)
+
+
+  //sort and reverse array
+  //var arr = ["banana", "aaple", "zebra", "cat"];
+  //var z = arr.sort();
+  //var m = arr.reverse()
+  //console.log(m);
+
+
+  //Slice Method
+  // var fruits = ["Banana", "Orange", "Mango"]
+  // var z = fruits.slice(1)
+  // console.log(z)
+
+
+  // var fruits = "Hafeez Developer"
+  // var z = fruits.replace("Developer", "Engineer")
+  // console.log(z) // Replace method
+
+  
+  // function greet() {
+  //   console.log("set interval");
+  // }
+  // setInterval(greet, 2000)
+
+
+  //remove duplicate value from array
+  let arr = [1, 2, 3, 4, 1, 5, 3, 6, 4, 11, 10, 5, 2, 11, 10];
+  //let removeDuplicate = [...new Set(arr)] // 1st way
+  //const removeDuplicate = arr.filter((val, index) => arr.indexOf(val) == index) //second way
+  const removeDuplicate = arr.filter((val, index) => arr.indexOf(val) == index)
+  console.log(removeDuplicate)
+
+
+  //remove duplicate value from array in objects
+  // const person = [
+  //   {id: 1, fName: "jhone", lName: "Doe"},
+  //   {id: 2, fName: "rijo", lName: "Moe"},
+  //   {id: 3, fName: "Rockey", lName: "Methu"},
+  //   {id: 2, fName: "rijo", lName: "Moe"},
+  // ]
+  
+  // let ids = person.map(o => o.id);
+  // let filterPerson = person.filter(({id}, index) => !ids.includes(id, index + 1))
+  // console.log(filterPerson)
+  
+  //First letter to capital
+  let str = "this is hafeez";
+  let capStr = str.charAt(0).toUpperCase() + str.slice(1).toLocaleLowerCase();
+  console.log(capStr)
+
+  
+</script>
+</body>
+
+</html>

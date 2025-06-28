@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<title>Online HTML Editor</title>
+<head>
+</head>
+<body>
+<p id="try">Logical Operators</p>
+<div id="text"></div>
+
+<script>
+//And && operator : It returns true if both expression are true, otherwise it return false    
+let x = 6;
+let y = 3;
+console.log(x == 5 && y == 5)//false
+console.log(x == 6 && y == 0)//false
+console.log(x == 0 && y == 3)//false
+console.log(x == 6 && y == 3)//true
+console.log(x == 1 && y == 0)//false
+
+
+
+//OR || operator : It returns true if one or both expressions are true, otherwise it returns false.
+let a = 6;
+let b = 3;
+console.log(a == 5 || b == 5)//false
+console.log(a == 6 || b == 0)//true
+console.log(a == 0 || b == 3)//true
+console.log(a == 6 || b == 3)//true
+console.log(a == 1 || b == 0)//false
+
+
+//Not ! operator : It returns true for false statements and false for true statements.
+let c = 6;
+let d = 3;
+console.log(!(c === d))//true
+console.log(!(c > d))//false
+</script>
+</body>
+</html>

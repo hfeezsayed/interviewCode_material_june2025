@@ -1,0 +1,86 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+    border: 2px solid #ccc;
+    height: 50vh; 
+    padding: 10px;
+}
+
+.item1 {
+    font-size: 2rem;
+    color: white;
+    background-color: green;
+    margin: 2px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #000;
+    text-align: center; 
+    display: none;
+}
+
+/* .one {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+} */
+
+/* .one {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+@media(min-width: 300px) and (max-width: 767px) {
+    .one {
+        display: block;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1080px) {
+    .two {
+        display: block;
+        background-color: white;
+        color: #000;
+    }
+}
+
+@media(min-width: 1080px) and (max-width: 1200px) {
+    .three{
+        display: block;
+        background-color: red;
+        color: white;
+    }
+}
+
+@media(min-width: 1200px) and (max-width: 1400px) {
+    .four{
+        display: block;
+        background-color: violet;
+        color: white;
+    }
+}
+
+p::first-line {
+    color: green;
+    
+}
+
+html {
+  font-size: 25px;
+}
+
+#first {
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+#second {
+    font-size: 4rem;
+    padding: 2rem;
+}

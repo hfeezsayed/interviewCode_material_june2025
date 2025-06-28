@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" href="./index.js"></script>
+</head>
+
+<body>
+    <style>
+        * {
+            font-family:'Courier New', Courier, monospace;
+        }
+    </style>
+   <h1 id="demo" style="text-align: center;">How To Use SPREAD vs REST Operator</h1>
+   
+<script>
+//SPREAD OPERATOR   
+//The 'SPREAD' operator in JavaScript expands values in arrays and strings into individual elements. 
+  var opt = [1, 2, 3];
+  var newOpt = 12;
+  var z = [...opt, newOpt];
+  console.log(z);
+
+
+//REST OPERATOR
+//The 'REST' operator puts the values of user-specified data into a JavaScript array
+  function myFunc(a, b, ...others) {
+    console.log(a);
+    console.log(b);
+    console.log(others);
+}
+myFunc(10, 20, 30, 40)
+</script>
+</body>
+
+</html>

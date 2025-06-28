@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS important</title>
+  </head>
+  <body>
+    <script>
+      //How can we display numbers after one second
+      function funNumbers(n) {
+        for (let i = 0; i <= n; i++) {
+          setTimeout(() => {
+            console.log(i);
+          }, i * 1000);
+        }
+      }
+      funNumbers(10);
+    </script>
+
+    <script>
+      //using reduce function need addition in the array
+      const arr = [2, 3, 4, 5, 6, 7];
+      const arr1 = arr.reduce((x, y) => x + y);
+      console.log(arr1);
+    </script>
+
+    <script>
+      //function currying
+      function myFunc(a) {
+        return function (b) {
+          return function (c) {
+            console.log(a + b + c);
+          };
+        };
+      }
+      myFunc(2)(3)(4);
+    </script>
+
+    <script>
+      //using map function do perform each square
+      const arr3 = [2, 3, 4, 5, 6, 7];
+      const eachSquare = arr3.map((item) => item * item);
+      console.log(eachSquare);
+    </script>
+
+    <script>
+      //array sort using sort method
+      const arrValue = [38, 18, 32, 73, 90, 44, 34, 55];
+      const arrSort1 = arrValue.sort((a, b) => a - b);
+      const arrSort2 = arrValue.sort((a, b) => b - a);
+      console.log("assending:", arrSort1);
+      console.log("dessending:", arrSort2);
+    </script>
+
+    <script>
+      //sorting string name in ascending and decending order
+      const dataList = [
+        { name: "Jhone" },
+        { name: "Arav" },
+        { name: "Geeta" },
+        { name: "Mohan" },
+        { name: "Sandy" },
+        { name: "Listy" },
+        { name: "Antony" },
+        { name: "Ginto" },
+      ];
+      const sortingData = dataList.sort((a, b) => a.name.localeCompare(b.name)); //ascending
+      const sortingData1 = dataList.sort((a, b) =>
+        b.name.localeCompare(a.name)
+      ); //decending
+      console.log(sortingData);
+      console.log(sortingData1);
+    </script>
+
+    <script>
+      //what will the output of below code
+      const promise = new Promise((resolve, reject) => {
+        console.log(1);
+        setTimeout(() => {
+          console.log("timerStart");
+          resolve("success");
+          console.log("timerEnd");
+        }, 0);
+        console.log(2);
+      });
+      promise.then((res) => console.log(res));
+      console.log(4);
+    </script>
+  </body>
+</html>

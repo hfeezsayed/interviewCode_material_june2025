@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript" href="./index.js"></script>
+  </head>
+
+  <body>
+    <style>
+      * {
+        font-family: "Courier New", Courier, monospace;
+      }
+    </style>
+    <h1 id="demo" style="text-align: center">How To Use Event Loop</h1>
+
+    <script>
+      ///Event Loop
+      //An event loop is something that pulls stuff out of the queue and places it into
+      // the execution stack whenever the function stack becomes empty.
+      //The event loop is the secret behind JavaScript’s asynchronous programming
+
+      // blow is the workflow of event loop
+      //call stack => call to web api => event queue => event loop => call stack
+
+      //example 1
+      // let a = true;
+      // setTimeout(() => {
+      //    a = false;
+      // },2000);
+      // while(a) {
+      //   console.log("Hello ajay") // Output - infinite loop with "Hello Ajay"
+      // }
+
+      //example 2
+      console.log("start");
+
+      setTimeout(() => {
+        console.log("Process");
+      }, 3000);
+
+      console.log("End");
+    </script>
+  </body>
+</html>

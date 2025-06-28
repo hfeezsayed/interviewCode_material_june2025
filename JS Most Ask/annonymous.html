@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" href="./index.js"></script>
+</head>
+
+<body>
+   <p id="demo">Bismillah</p>
+   
+<script>
+// Annonymous function means a function that has no name.  
+//It is a function that does not have any name associated with it. 
+//Normally we use the function keyword before the function name to define a function in JavaScript,
+//however, in anonymous functions in JavaScript, we use only the function keyword without the function name.
+//Example-1  
+ function sum(a) {
+    return function(b) {
+        return function(c) {
+            console.log(a + b + c)
+        }
+    }
+ }
+ sum(2)(2)(3)
+
+ //Example-2
+ (() => {// self-executing anonymous function
+   console.log("test block") 
+ })();
+</script>
+</body>
+
+</html>

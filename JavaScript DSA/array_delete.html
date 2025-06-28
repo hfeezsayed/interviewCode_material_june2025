@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete Element from Array</title>
+
+    <script>
+      //Way 1
+      //   let arr = ["orange", "red", "black", "white"];
+      //   let index = arr.indexOf("black");
+      //   if (index >= 0) {
+      //     arr.splice(index, 1);
+      //   }
+      //   console.log(arr)
+
+      //Way 2
+      //   let arr = ["orange", "red", "black", "white"];
+      //   arr.splice(2, 1)
+      //   console.log(arr)
+
+      //Way 3
+      let arr = ["orange", "red", "black", "white"];
+      let rem = arr.filter((val) => val != "black");
+      console.log(rem);
+    </script>
+  </head>
+  <body></body>
+</html>

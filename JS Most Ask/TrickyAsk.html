@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript" href="./index.js"></script>
+  </head>
+
+  <body>
+    <style>
+      * {
+        font-family: "Courier New", Courier, monospace;
+      }
+    </style>
+    <h1 id="demo" style="text-align: center">Tricky Ask Example</h1>
+
+    <script>
+      // Variables and Data Types
+      // const = can't be re-assigned a value and can't be declared again  (block scope)
+      // let = can be re-assigned a value but can't be declared again (block scope)
+      // var = it can be re-assigned a value and it can also be declared again  (Global scope)
+
+      // => Never use var in your code instead of let because of block and functional scope issues.
+      // # console.table([group of variables you want to show in tabular form])
+
+      const a = 10;
+      a = 20;
+      console.log(a);
+
+      //1.
+      a();
+      function a() {
+        console.log("a");
+      }
+
+      //hfkdfh
+      b();
+      var b = function () {
+        console.log("b");
+      };
+
+      //2.
+      var a;
+      function myFunction() {
+        return (a = 2);
+      }
+      myFunction(); //2
+      //Note for example 2
+      //When we do assignments without declarations in JavaSacript (a=2), the compiler will save
+      //the variable in the global scope. That’s why the output is 2 .
+      //You can avoid this behavior if you want, by using the strict mode "use strict”.
+
+      //3.
+      var a = 1;
+      function foo() {
+        var a = 2;
+        console.log(a);
+      }
+      foo();
+      console.log(a);
+
+      //4.
+      functionExpression(); // TypeError: functionExpression is not a function.
+      const functionExpression = function () {
+        console.log("Not Hoisted"); // functionExpression is not access before initilization.
+      }; // note - functionExpression is not hoisted in javascript.
+
+      //5.
+      console.log(y);
+      y = 1;
+
+      //6.
+      console.log(y);
+      var y = 2;
+
+      //7.
+      y = 3;
+      console.log(y);
+      var y;
+
+      //8.
+      var z = 1;
+      let z;
+      console.log(z);
+
+      //9.
+      //How to find the number is an integer?
+      var a = 22;
+      var b = "22";
+      var c = -2.2;
+      console.log(Number.isInteger(a));
+      console.log(Number.isInteger(b));
+      console.log(Number.isInteger(c));
+
+      //10.
+      //1.
+      for (var i = 0; i < 4; i++) {
+        setTimeout(() => console.log(i), 0);
+      } //4 4 4 4 with var //In case of var you are always referring to the same variable address,
+      // because var is function scoped.
+
+      //2.
+      for (let i = 0; i < 4; i++) {
+        setTimeout(() => console.log(i), 0);
+      } //0 1 2 3 with let
+      //let is block scoped. For every callback in setTimeout you have a different value of i,
+      // since it is a different block.
+    </script>
+  </body>
+</html>

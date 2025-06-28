@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" href="./index.js"></script>
+</head>
+
+<body>
+   <p id="demo">Bismillah</p>
+<script>
+   //There are three scope in javascript
+   //1. Block Scope
+   //2. Function Scope
+   //3. Global Scope
+
+
+   //1. Block Scope
+   //a. Before Es6, javascript had only Global scope and Function Scope
+   //b. Varriables declared inside of {}, can't accessed from outside the block
+
+   let x = "Hafeez"; // Global scope
+   function myName() {//Function scope
+      let y = "Salman"; //Block Scope
+      console.log(x)
+   }
+   myName();
+   console.log(y)
+   
+</script>
+</body>
+
+</html>

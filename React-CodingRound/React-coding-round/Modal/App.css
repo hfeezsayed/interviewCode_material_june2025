@@ -1,0 +1,41 @@
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 400px;
+  height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin: auto;
+  background-color: #fff;
+  box-shadow: -1px 3px 8px 1px #0000006b;
+  animation: 1s fadeInUp;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+h2 {
+  margin: 0;
+}
+.modal .modal-header,
+.modal-body {
+  padding: 1rem;
+}
+
+.onDiv {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000d4;
+  overflow: hidden;
+}

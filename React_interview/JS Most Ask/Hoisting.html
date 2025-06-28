@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" href="./index.js"></script>
+</head>
+
+<body>
+   <p id="demo">Bismillah</p>
+   
+<script>
+ //HOISTING
+ //Hoisting is the default behaviour of javascript that is all declaration part moving on the top 
+ //of the code before execution. but not initialized.
+ //function expression and class expression are not hoisted
+ 
+
+//Example 1
+// a()
+// function a(){
+//     console.log("a") // "a" becoz function and varriable are hoisted
+// }
+// b();
+// var b = function(){
+//     console.log("b") // b is not a function bcoz function is stored in b while stored function are not hoisted in js
+// }
+
+
+//Example 2 with Var
+// var x;
+// x = 5;
+// console.log(x)//5
+
+//example 3 
+// x = 5;
+// var x;
+// console.log(x)//5
+
+
+//example 3  with let
+// x = 5;
+// let x;
+// console.log(x)//Cannot access 'x' before initialization
+
+
+//Example 2 with Var
+// console.log(x)
+// greet()
+// function greet(){
+//     console.log("Welcome")
+// }
+// var x = 5;
+// console.log(x) //5
+
+// console.log(a)
+// greet()
+// function greet(){
+//     console.log("Welcome")
+// }
+// let a = 5; // cannot access 'a' before initialization
+// // const a = 5; // cannot access 'a' before initialization
+// console.log(a);
+
+
+//Hoisting of Function
+// catName("Tiger");
+//    function catName(name) {
+//       console.log("My cat's name is " + name);
+//   }
+
+//Hoisting of Varriable
+   // console.log(num); // Returns 'undefined' from hoisted var declaration (not 6)
+   // var num; // Declaration part this is the hositing
+   // num = 6; // Initialization
+   // console.log(num);
+
+//Hoisting in const
+   // console.log(num);
+   // const num; 
+   // num = 6; //Uncaught SyntaxError: Missing initializer in const declaration
+
+
+greet()
+const greet = () => {
+  console.log("ok")
+}
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Even and Odd value from array</title>
+
+    <script>
+      let data = [10, 3, 12, 8, 9, 7, 17, 31, 16];
+      let evenVal = [];
+      for (let i = 0; i < data.length; i++) {
+        //if(data[i] % 2 == 1) { //for odd value
+        if (data[i] % 2 == 0) {
+          //for even value
+          evenVal.push(data[i]);
+        }
+      } //End with find even value
+      for (let i = 0; i < evenVal.length; i++) {
+        //start with double every even value
+        evenVal[i] = evenVal[i] * 2;
+      }
+
+      //find the total count of values
+      let count = 0;
+      for (let i = 0; i < evenVal.length; i++) {
+        count++;
+      }
+      console.log(evenVal); //find the even values
+      console.log(count); //count the even values
+    </script>
+  </head>
+  <body></body>
+</html>

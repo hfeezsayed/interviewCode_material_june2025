@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<title>Online HTML Editor</title>
+<head>
+</head>
+<body>
+<p id="try">Online HTML Editor</p>
+<div id="text"></div>
+
+<script>
+    let animals = { //De-structuring example of object
+      name: "John",
+      age: 29,
+      school: "NRM"
+   }
+   const {name, age, school} = animals;
+   console.log(animals)
+
+
+   //2. destructuring of Array
+   const profile = ["Oluwatobi", "Sofela", "codesweetly.com"];
+
+   //not a write way
+   // const firstName = profile[0];
+   // const middleName = profile[1];
+   // const lastName = profile[2];
+   // console.log(firstName, middleName, lastName)
+
+   //This is a good way
+   const [firstName, middleName, lastName] = profile;
+   console.log(firstName, middleName, lastName)
+</script>
+</body>
+</html>

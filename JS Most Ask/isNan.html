@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript" href="./index.js"></script>
+  </head>
+
+  <body>
+    <p id="demo">Bismillah</p>
+
+    <script>
+      //isNan function return true if the argument is not a number otherwise it is false.
+
+      console.log(NaN === NaN); //false
+      console.log(NaN == NaN); //false
+      console.log(Object.is(NaN, NaN)); //true
+
+      var x = isNaN("123");
+      console.log(x); // True becoz argument is a string // False becoz string convert into number
+
+      console.log("nan", isNaN(NaN)); //true
+      console.log("undefined", isNaN(undefined)); //true
+      console.log("number", isNaN(123)); //false
+      console.log("true", isNaN(true)); //false
+      console.log("37.37", isNaN("37.37")); //false bcoz isNan convert number string into string output = 37.37
+      console.log("37, 5", isNaN("37,5")); //True
+      console.log("123ABCD", isNaN("123ABCD")); //True
+      console.log("empty", isNaN("")); //False becoz empty string convert into 0; or 0 is a false value
+      console.log("Date", isNaN(new Date())); //False
+      console.log("Date.toString()", isNaN(new Date().toString())); //True
+    </script>
+  </body>
+</html>

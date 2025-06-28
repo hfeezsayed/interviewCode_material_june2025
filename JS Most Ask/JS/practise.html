@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>JS Practise</title>
+  <link rel="stylesheet" href="index.css">
+  <script type="text/javascript" href="./index.js"></script>
+</head>
+
+<body>
+
+  <script>
+    // 1. Remove duplicate value from Array
+    let arr = [1, 2, 3, 4, 1, 5, 3, 6, 4, 11, 10, 5, 2, 11, 10];
+    let uniqueVal = [...new Set(arr)];
+    //const uniqueVal = arr.filter((val, index) => arr.indexOf(val) == index);
+    //console.log(uniqueVal);
+
+    // 2. Remove duplicate value from Array of objects
+    const person = [
+      { id: 1, fName: "Hafeez", lName: "ali" },
+      { id: 2, fName: "Salman", lName: "khan" },
+      { id: 1, fName: "Hafeez", lName: "ali" },
+      { id: 3, fName: "Faizan", lName: "umar" },
+      { id: 2, fName: "Salman", lName: "khan" }
+    ]
+    // First way
+    //const newPerson = [...person.reduce((map, obj) => map.set(obj.id, obj), new Map()).values()]; 
+    //console.log(newPerson)
+
+    // Second way
+    let ids = person.map(o => o.id);
+    const filterPerson = person.filter(({ id }, index) => !ids.includes(id, index + 1));
+    //console.log(filterPerson);
+
+
+    // 3. How to convert first letter into capital letter
+    let str = "this is hafeez";
+    let cap = str.charAt(0).toUpperCase() + str.slice(1).toLowerCase(); //first letter capital
+    //let cap = str.toUpperCase(); // Full sentence capital letter
+    //console.log(cap)
+
+
+    // 4. How to capitalize last letter of string  // 1st way
+    function yay() {
+      var input = "Party like its 2015";
+      input = input.toLowerCase().split("").reverse().join("").split(" ");
+      for (var i = 1; i < input.length; i++) {
+        var len = input[i].length - 1;
+        input[i] = input[i].substring(0, len) + input[i].substr(len).toUpperCase();
+      }
+      return input.reverse().join(" ");
+    }
+    //console.log(yay());
+
+    // How to capital last letter of string // 2nd way
+    let strVal = "hello world"
+    strVal = strVal.split(" ");
+    strVal = strVal.map(element => {
+      return element.slice(0, -1) + element.slice(-1).toUpperCase()
+    });
+    strVal = strVal.join(" ")
+    //console.log(strVal);
+
+
+    // 5. Reverse word in javaScript
+    let sentence = "My Name Is Hafeez";
+    // function ReverseSent() { // 1st method
+    //   let word = sentence.split("");
+    //   let revWord = word.reverse();
+    //   return revWord.join("");
+    // }
+
+    const reverseSentance = () => { //Second way
+      let splitWord = sentence.split("");
+      let reverseWord = splitWord.reverse();
+      return reverseWord.join("");
+    }
+    //console.log(reverseSentance())
+
+
+    // 5. How to emty an array
+    let arrList = [1, 2, 3, 4, 5];
+    arrList = []; //1st way
+    //arrList.length = 0; // 2nd way
+    //console.log(arrList)
+
+
+    // 6. How would you check if a number is an integer?
+    function intNum(num) {
+      return num % 1 === 0;
+    }
+    //console.log(intNum(2)); true
+    //console.log(intNum(12.2)); false
+    //console.log(intNum("Hafeez")); false
+
+    // 6. How to use callback function?
+    // function sum(a, b) { 1st example
+    //   console.log(a+b);
+    // }
+    // sum(10, 20);
+
+    function hrCall(callbackFunc) {
+      console.log("Call to HR");
+      setTimeout(() => {
+        callbackFunc();
+      }, 3000)
+    }
+
+    // function dirCall() {
+    //   console.log("Call to Director")
+    // }
+    // //hrCall(dirCall);
+
+
+   // Higher Order function
+   const interviewQuestions = (name) => {
+      if(name === 'Aviskaran') {
+         return function(topic) {
+            console.log(`Hi ${name}, What is ${topic}? please explain us.`)
+         }
+      } else {
+        console.log("Something went wrong")
+      }
+   }
+   interviewQuestions("Aviskaran")("UI")
+
+
+  //Hoisting of Function
+  catName("Tiger");
+   function catName(name) {
+      console.log("My cat's name is " + name);
+  }
+
+  //Hoisting of Varriable
+   console.log(num); // Returns 'undefined' from hoisted var declaration (not 6)
+   var num; // Declaration part this is the hositing
+   num = 6; // Initialization
+   console.log(num);
+
+   //Hoisting in const
+   //console.log(num);
+   //const num; 
+   num = 6; //Uncaught SyntaxError: Missing initializer in const declaration
+
+
+
+   //Spread VS Rest operator
+   //1. Spread Operator example
+   let arrNum = [0, 1, 2, 3];
+   let newArr = 12;
+   console.log(...arrNum, newArr)
+
+   //2. Rest Operator example
+   function myFunction(a, b, ...moreOthers) {
+     console.log(a)
+     console.log(b)
+     console.log(moreOthers)
+   }
+   myFunction("one", "two", "three", "four");
+
+
+   //Closures
+   function outerFunction() {
+   var x = 10;
+   function innerFunc() {
+     console.log(x)
+    }
+    innerFunc()
+  }
+  outerFunction()
+
+
+  //How to get 3 character from string
+  // var str = "hafeez";
+  // const getStr = str.slice(0, 3);
+  // console.log(getStr) //haf
+
+  //How to get last 3 character from string
+  // var str = "hafeez";
+  // const getStr = str.slice(-3);
+  // console.log(getStr) //eez
+
+  //JS tricky
+  //console.log(x) // reference error we can't access x before initialization
+  //let x = 10;
+
+  console.log(x) // Undefined
+  var x = 10;
+
+
+  //increment value by using closure
+  for (var i = 0; i < 5; i++) {
+
+    setTimeout((function outer(i) {
+
+        return function inner() {
+            console.log(i); // 0 1 2 3 4
+        }
+
+    })(i), 3000);
+}
+  
+
+  </script>
+</body>
+
+</html>

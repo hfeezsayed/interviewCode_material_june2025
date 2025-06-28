@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript" href="./index.js"></script>
+  </head>
+
+  <body>
+    <p id="demo">Bismillah</p>
+
+    <script>
+      //find the index number of Array by indexOf method
+      const arr = [1, 2, 3, 4, 5, 6];
+      const arr1 = arr.indexOf(1);
+      console.log(arr1);
+
+
+      //find the Index number of array by findIndex method
+      const x = [1, 2, 3, 4, 5, 6]
+      const z = x.findIndex(x => x === 2)
+      console.log(z)
+
+
+      //find the index from an array which is greater than the value.
+      const array1 = [5, 12, 8, 130, 44];
+      const isLargeNumber = (element) => element > 13;
+      console.log(array1.findIndex(isLargeNumber));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interval</title>
+
+    <script>
+      let seconds = 0;
+      function counterFunction() {
+        let x = document.getElementById("main");
+        seconds += 1;
+        x.innerHTML = `you have been here ${seconds} seconds`;
+      }
+      setInterval(counterFunction, 1000);
+    </script>
+  </head>
+  <body>
+    <div className="main_div" id="main"></div>
+  </body>
+</html>

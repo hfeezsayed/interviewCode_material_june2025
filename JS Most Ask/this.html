@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" href="./index.js"></script>
+</head>
+
+<body>
+   <p id="demo">Bismillah</p>
+
+   <!-- This keyword used -->
+   <button onclick="this.style.display= 'none'">Click</button>
+   
+<script>
+ //THIS keyword
+ //In Javascript, the this keyword refers to an object
+ //Means in Javascript, depends how it is used.
+ //In Object method, this refers to the object
+ //Alon, This keyword refers to the global object
+
+ //Example 1 for Object method (this)
+ const person = {
+    firstName: "Hafeez",
+    lastName: "Ali",
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    }
+ }
+ var z = person.fullName()
+ console.log(z); //Hafeez Ali
+
+
+//Example 2 for alone (this)
+ let x = this;
+ console.log(x); //Object Window
+
+
+
+ //Example 3 for strict mode (this)
+ "use strict";
+ let b = this;
+ console.log(b)
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- <link rel="stylesheet" type="text/css" href="index.css"> -->
+   <title>Project</title>
+   <style>
+      * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family:sans-serif;
+}
+
+p, li, h1 {
+	color: #053162;
+}
+
+p, li, a {
+   font-size: 14px;
+}
+
+nav {
+   font-size: 18px;
+   padding: 10px 32px;
+
+}
+
+.logo-img {
+	width: 152px;
+	height: 32px;
+	max-width: 100%;
+}
+
+.main-nav {
+	list-style-type: none;
+	float: right;
+	padding-top: 6px;
+}
+
+.main-nav li {
+	display: inline-block;
+	margin: 0px 10px;
+}
+
+.main-nav li a {
+	text-decoration: none;
+	color: #100412;
+	font-weight: 600;
+}
+
+section {
+	margin-bottom: 4rem;
+}
+
+.container {
+	display: flex;
+	margin: 1.5rem 2.5rem;
+	flex-wrap: wrap;
+}
+
+.banner .img-responsive {
+	display: flex;
+	padding: 0px 30px;
+	width: 100%;
+	height: auto;
+}
+
+.flex-fwidth {
+	flex: 100%;
+}
+
+.tagline h1 {
+	display: inline-block;
+    vertical-align: top;
+    padding-left: 10px;
+	
+}
+
+.tagline p {
+	padding: 1.5rem 0rem;
+}
+
+.tagline img {
+	width: 46px;
+	height: 26px;
+}
+
+.jar-items {
+	width: 100vw;
+	display: flex;
+	justify-content: space-between;
+}
+.jar-items .item {
+	width: 33%;
+	margin: 1rem;
+}
+.jar-items .item img {
+	width: 100%;
+	border: 2px solid #053162;
+}
+.carring-img {
+	float: right;
+	padding-top: 15px;
+}
+
+.ml {
+	margin-left: 0 !important;
+}
+.mr {
+	margin-right: 0 !important;
+}
+
+.mt {
+	margin-top: 3.5rem;
+}
+
+.item-text {
+	text-align: center;
+}
+
+.item-text h3, .left-pera h3 {
+   color: #931c16;
+   padding: 10px 0px;
+}
+
+ .listing {
+	display: flex;
+ }
+
+ .left-pera ul {
+	margin: 25px 0px 0px 40px;
+ }
+
+ .left-pera ul li {
+	color: #053162;
+	padding-bottom: 5px;
+ }
+
+ .flex-left {
+	flex: 75%;
+ }
+
+ .flex-right {
+	flex: 25%;
+	
+ }
+
+ hr {
+	height: 6px;
+    width: 100%;
+    background-color: #931c16;
+    margin-top: 4rem;
+ }
+
+ .second-block {
+	margin-top: 2rem;
+ }
+ .img-fluid {
+	width: 100%;
+	padding-top: 1rem;
+ }
+
+ .footer p {
+	text-align: center;
+	color: #10325d;
+ }
+
+ .footer ul {
+	text-align: center;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+ }
+
+ .footer ul li {
+	display: inline-block;
+ }
+
+ .footer ul li a {
+	text-decoration: none;
+	font-weight: 700;
+	padding: 0px 15px;
+	color: #10325d;
+ }
+
+.mob-item, .menu-bar {
+	display: none;
+}
+.sm2, .small-size {display: none;}
+
+
+
+@media only screen and (max-width: 767px ) and (min-width: 320px){
+	.main-nav {
+		float: none;
+        flex-direction: column;
+        align-items: center;
+		justify-content: center;
+		display: none;
+		background: #931c16;
+		opacity: 0.6;
+		margin: 0px -30px;
+	}
+	nav {padding: 10px 15px;}
+	.logo-img {
+		width: 100px;
+		height: auto;
+	}
+	.logo{
+       display: inline-block;
+       padding-left: 0;
+       padding-bottom: 6px;
+	}
+   
+	.main-nav li {
+		margin-bottom: 10px;
+		display: block;
+		border-bottom: 1px solid #ccc;
+        width: 100%;
+        text-align: center;
+		padding-bottom: 6px;
+	}
+
+	.tagline h1 {
+		font-size: 1rem;
+	}
+
+	.jar-items {
+		flex-direction: column;
+	}
+	.jar-items .item {
+		width: 100%;
+	}
+	.sm2 {
+		display: block !important; 
+		padding-top: 0;
+		margin-top: -26px;
+	}
+	
+	.pad1 {padding: 0 !important;}
+	.flex-left {width: 100%;}
+	.flex-right {width: 100%;}
+	.listing {flex-direction: column;}
+	.left-pera ul {
+		margin: 25px 0px 0px 20px;
+	}
+	.carring-img {width: 100%;}
+	.flex-right img {width: 100%;}
+	.banner .img-responsive {padding:0px 15px;}
+	.container {margin: 2rem 0rem}
+	.flex-fwidth {padding: 15px;}
+	.tagline img {width: 30px; height: 18px;}
+	.tagline p {padding-top: 15px;}
+	.jar-items .item{margin: 0; padding: 0px 15px;}
+	.item-text p {padding-bottom: 15px;}
+	.mob-item {display:inherit;}
+	.left-pera {padding: 15px;}
+	.footer {padding: 15px;}
+	.footer p {font-size: 12px;}
+	.footer ul li {display: inline;}
+	.footer ul li a {font-size: 10px; padding: 0px 4px;}
+	section { margin-bottom: 2rem;}
+	hr {margin-top: 2rem;}
+	.main-nav li a {font-size: 12px; color: #fff;}
+	.a1 {display: none;}
+	.menu-bar {
+	width: 25px;
+    height: auto;
+    display: inline-block;
+	float: right;
+	}
+}
+
+@media only screen and (max-width: 1920px ) and (min-width: 768px){
+	.logo{
+       display: inline-block;
+       padding-left: 0;
+       padding-bottom: 6px;
+	}
+	.tagline h1 {
+		font-size: 18px;
+		padding-top: 5px;
+	}
+	.item-text h3 {font-size: 18px;}
+	.a1, .a2 {padding-left: 1.5rem;}
+	.left-pera h3 {padding-top: 0px;}
+	.img-a1 img {width: 100%;}
+	section {margin-bottom: 2rem;}
+}
+
+   </style>
+</head>
+<body>
+      <header>
+         <nav>
+            <a href="#" class="logo">
+               <img src="https://cleanlier-ear.000webhostapp.com/logo.jpg" alt="logo" class="logo-img"/>
+            </a>
+            <a href="#" onclick="myFunc()"><img src="https://cleanlier-ear.000webhostapp.com/menu.png" class="menu-bar"/></a>
+            <ul class="main-nav" id="demo">
+               <li><a href="#">About Us</a></li>
+               <li><a href="#">Usefull Resources</a></li>
+               <li><a href="#">Support</a></li>
+               <li><a href="#">Contact Us</a></li>
+            </ul>
+         </nav>
+         <div class="banner">
+            <img src="https://cleanlier-ear.000webhostapp.com/banner.png" alt="banner" class="img-responsive"/>
+         </div>   
+      </header>
+      <section>
+         <div class="container">
+            <div class="tagline flex-fwidth">
+                <img src="https://cleanlier-ear.000webhostapp.com/arrow.png" alt="arrow" />
+                <h1>What does Lorem ipsum?</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+            </div>
+            <div class="jar-items">
+               <div class="item ml">
+                  <img src="https://cleanlier-ear.000webhostapp.com/Jar.jpg" alt="item" />
+                  <div class="item-text">
+                     <h3>Where does it come from?</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </p>
+                  </div>
+               </div>
+               <div class="item">
+                  <img src="https://cleanlier-ear.000webhostapp.com/Jar.jpg" alt="item" />
+                  <div class="item-text">
+                     <h3>Where does it come from?</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </p>
+                  </div>
+               </div>
+               <div class="item mr">
+                  <img src="https://cleanlier-ear.000webhostapp.com/Jar.jpg" alt="item" />
+                  <div class="item-text">
+                     <h3>Where does it come from?</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </p>
+                  </div>
+               </div>
+            </div>
+            <hr class="mob-item"/>
+            <div class="tagline flex-fwidth mt">
+               <img src="https://cleanlier-ear.000webhostapp.com/arrow.png" alt="arrow" />
+               <h1>What does Lorem ipsum?</h1>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+           </div>
+           <div class="listing">
+              <div class="flex-right right-pera sm2">
+                  <img src="https://cleanlier-ear.000webhostapp.com/carring.jpg" alt="jar"  class="carring-img"/>
+               </div>
+               <div class="flex-left left-pera">
+                  <h3>Where does it come from?</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </p>
+                  <ul>
+                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore consectetur adipiscing elit, sed do elit, sed do.
+                     </li>
+                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore consectetur adipiscing elit, sed do elit, sed do.
+                     </li>
+                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore consectetur adipiscing elit, sed do elit, sed do.
+                     </li>
+                     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, 
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore consectetur adipiscing elit, sed do elit, sed do.
+                     </li>
+                  </ul>
+               </div>
+               <div class="flex-right right-pera a1">
+                  <img src="https://cleanlier-ear.000webhostapp.com/carring.jpg" alt="jar"  class="carring-img"/>
+               </div>
+           </div>
+           <div class="listing second-block">
+            <div class="flex-right left-pera img-a1 pad1">
+               <img src="https://cleanlier-ear.000webhostapp.com/Jar.jpg" alt="carring" />
+            </div>
+            <div class="flex-left left-pera a2">
+               <h3>Where does it come from?</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </p>
+               <ul>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, 
+                     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore consectetur adipiscing elit, sed do elit, sed do.
+                  </li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, 
+                     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore consectetur adipiscing elit, sed do elit, sed do.
+                  </li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, 
+                     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore consectetur adipiscing elit, sed do elit, sed do.
+                  </li>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboreLorem ipsum dolor sit amet, 
+                     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore consectetur adipiscing elit, sed do elit, sed do.
+                  </li>
+               </ul>
+            </div>
+           </div>
+          
+             <hr />
+           
+         </div>
+
+      </section>
+      <footer>
+          <div class="footer">
+            <p>
+               BRAND and the Mysite logo are registered trademarks of Mysite AB, used licence by Mysite Inc.  
+               <br />©2023 Mysite. All rights reserved
+            </p>
+           
+            <ul>
+               <li><a href="#">Legal Notice</a></li>
+               <li><a href="#">Privacy policy</a></li>
+               <li><a href="#">Contact us</a></li>
+               <li><a href="#">Cookie Policy</a></li>
+            </ul>
+          </div>
+      </footer>
+
+      <script>
+         function myFunc() {
+            var x = document.getElementById('demo');
+            if(x.style.display == 'flex') {
+             x.style.display = 'none';
+            } else {
+             x.style.display = 'flex'
+            }
+         }
+       </script>
+</body>
+</html>

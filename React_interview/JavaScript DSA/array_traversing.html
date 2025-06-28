@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Treversing</title>
+    <script>
+        let arr = [10, 32, 34, 12, 65, 76, 19, 53, 87]
+
+        //1. Print the value of array
+        // for(let i = 0; i < arr.length; i++) {
+        //     document.write(`${i}: ${arr[i]} <br/>`)
+        // }
+
+        //2. find the value from array
+        // let x = 7;
+        // document.write(arr[x])
+
+        function myFunc() {
+           let x = document.getElementById('elementValue').value
+           if(x < arr.length) {
+              alert(arr[x])
+           } else {
+              alert("Please enter the valid value") 
+           }
+        }
+        myFunc()
+    </script>
+</head>
+<body>
+    <h1>Bismillah</h1>
+    <input type="text" id="elementValue"/>
+    <button onclick="myFunc()">Get element</button>
+</body>
+</html>

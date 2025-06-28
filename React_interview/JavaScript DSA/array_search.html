@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search value from Array</title>
+
+    <script>
+        // let data = [20, 31, 37, 21, 9, 78, 39];
+        // let item = 31;
+        // let index = undefined;
+       
+    //1. way 
+    //    for(i = 0; i < data.length; i++) {
+    //       if(data[i] === item) {
+    //          index = i;
+    //          break;
+    //       }
+    //    }
+    //    console.log(index)
+
+    //2 way
+    // let x =  data.indexOf(item)
+    // console.log(x)
+
+    // let x = data.filter((val) => val != item) //how to delete item from array by filter
+    //data.splice(1, 1) //how to delete item from array by splice
+    //console.log(data)
+
+    
+    //Dynamic way 
+
+    //How to find the value from array that is greater than 5
+    var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    var resultArray = [];
+    var count = 0;
+    for (var i = 0; i < 10; i++) {
+    let el = arr[i];
+    if (el > 5) {
+    resultArray.push(el);
+    count += 1;
+    }
+ }
+ 
+ console.log(resultArray)
+   
+    function searchEl() {
+        let data = [20, 31, 37, 21, 9, 78, 39];
+        let searchVal = document.getElementById('searchEL').value;
+        let index = undefined;
+
+        for(let i = 0; i < data.length-1; i++) {
+            if(data[i] === parseInt(searchVal)) { // or if(data[i] == searchVal)
+                index = i;
+                break;
+            }
+        }
+        console.log(index)
+    }
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="Enter a value" id="searchEL"/>
+    <button onclick="searchEl()">Delete</button>
+</body>
+</html>

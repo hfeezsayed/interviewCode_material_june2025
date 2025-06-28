@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript" href="./index.js"></script>
+  </head>
+
+  <body>
+    <p id="demo">Bismillah</p>
+
+    <script>
+      // Remove duplicate value from Array
+      //Example 1
+      // const arr = [1, 2, 3, 4, 1, 5, 3, 6, 4, 11, 10, 5, 2, 11, 10];
+      // const dupVal = [...new Set(arr)];
+      // console.log(dupVal);
+
+      //Example 2
+      const arr1 = [1, 2, 3, 4, 1, 5, 3, 6, 4, 11, 10, 5, 2, 11, 10];
+      const remDup = arr1.filter((val, index) => arr1.indexOf(val) == index);
+      console.log(remDup);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript" href="./index.js"></script>
+  </head>
+
+  <body>
+    <p id="demo">Bismillah</p>
+
+    <script>
+      //delete duplicate by id
+      const person = [
+        { id: 1, name: "Hafeez" },
+        { id: 2, name: "Manzar" },
+        { id: 1, name: "Hafeez" },
+        { id: 3, name: "Salman" },
+        { id: 4, name: "Mithun" },
+      ];
+
+      let ids = person.map((o) => o.id);
+      const remDup = person.filter(
+        ({ id }, index) => !ids.includes(id, index + 1)
+      );
+      console.log(remDup);
+
+      //delete duplicate by name
+      const person1 = [
+        { name: "Hafeez" },
+        { name: "Manzar" },
+        { name: "Hafeez" },
+        { name: "Salman" },
+        { name: "Mithun" },
+      ];
+
+      let ids1 = person1.map((o) => o.name);
+      let remDup1 = person1.filter(
+        ({ name }, index) => !ids1.includes(name, index + 1)
+      );
+      console.log(remDup1);
+    </script>
+  </body>
+</html>

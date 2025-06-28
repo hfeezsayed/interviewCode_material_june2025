@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS 100 Questions</title>
+
+    <script>
+    //1.
+    //let a = [];
+    //let b = [];
+    //console.log(a == b); //false because it will check the memory location that can't be same
+    //console.log(a === b); //false
+
+    //2.
+    //let a = []
+    //let b = a;
+    //console.log(a == b)//true because the memory location is the same for a and b bcoz a is assigning into b
+    //console.log(a === b)//true
+
+    //3
+    // let a = [20];
+    // let b = [20];
+    // console.log(a[0] == b[0]);//true
+    // console.log(a[0] === b[0]);//true
+
+    //4.
+    //console.log(typeof NaN)//number : NaN by default it has a spcecial number
+
+    //5.
+    // let data = 10 - -10; 
+    // console.log(data)//20
+
+    //6.
+    // const set = new Set([1, 1, 2, 3, 4]);
+    // console.log(set)//1, 2, 3, 4 : becuase Set will remove the duplicate value 
+
+    //7.
+    // let data = {name: "Hafeez"}
+    // console.log(delete data.name)//true : bcoz it will delete the property and return true that its done.
+    // console.log(data)//{}
+
+    //8. 
+    //const data = {name: "Hafeez"}
+    //console.log(delete data)//false: becoz we can't delete directaly by using delete it will delete only property of Object
+
+    //9.
+    // const data = ["Hafeez", "Manzar", "Faizan"]
+    // const [y] = data;
+    // console.log(y) //"Hafeez": it will take the first value from array
+
+    //10.
+    // const data = ["Hafeez", "Manzar", "Faizan"]
+    // const [,y] = data; //How to get the second value
+    // console.log(y)//"manzar: get the second value by using comma before y"
+
+    //11. How to get name property
+    // const data = {name: "Hafeez", age: 29}
+    // const {name} = data;
+    // console.log(name)
+
+    //12.
+    // let data = {name: "Hafeez", age: 29};
+    // let info = {city: "Noida", mail: 'test@demo.com'};
+    // console.log({data, ...info})//{data: {name: "Hafeez", age: 29}, city: "Noida", mail: 'test@demo.com'}
+
+    //13.
+    // const name = "Hafeez"
+    // console.log(name())//name is not a function
+
+    //14.
+    // const result = false || {} || null;
+    // console.log(result)//{}: becoz it will not count of false or null
+
+    //15.
+    // const result = null || false || " ";
+    // console.log(result)//empty string : becoz if all are negative value then it will take the last value always
+
+    //16.
+    // const result = [] || 0 || null;
+    // console.log(result)//[] : becoz blank array and object count as positive value
+
+    //17.
+    //console.log("❤️" === "❤️") //true: becoze it will compare of unicode number of heart instead of images.
+
+    //18.
+    //JSON.parse() to convert text into a JavaScript object
+
+    //19.
+    // let a = "Hafeez";
+    // function myFunc() {
+    //     console.log(a)
+    //     let a = "Salman";
+    // }
+    // myFunc()//a con not access before intialization
+
+    //20.
+    // let a = "Hafeez";
+    // function myFunc() {
+    //     console.log(a)
+    //     var a = "Salman";
+    // }
+    // myFunc()//undefined
+
+    //21.
+    // let a = "Hafeez";
+    // function myFunc() {
+    //     console.log(a)
+    // }
+    //let and const are block scope
+    //myFunc()//"Hafeez"
+
+    //22.
+    //(` `)Template strings or back-tick, it allow to multiple strings.
+
+    //23. How to get 6 output into given functtion
+    // function myFunc(x, y, z) {
+    //     return x + y + z
+    // }
+    // console.log(myFunc(2, 2, 2))//simple way for 6 
+    // console.log(myFunc(...[1, 2, 3])) //array destruture way for 6 output
+
+    //24.
+    // const name = "Hafeez Ali";
+    // console.log(!typeof name === 'object')//false
+    // console.log(!typeof name === 'string')//false
+
+    //25.
+    // const name= "Hafeez";
+    // const age= 29;
+    // console.log(isNaN(name))//true
+    // console.log(isNaN(age))//false
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,48 @@
+import {useState} from "react";
+import "./App.css";
+import json from "./data.json";
+
+//Create json data for files and folder structure
+//expand file and folders
+//add/remove files and folder
+
+function List({ list }) {
+  const [expanded, setExpanded] = useState({});
+  return (
+    <div className="left-pannel">
+      {list.map((node) => {
+        return (
+          <div key={node.id}>
+            {node.isFolder && (
+              <span
+                onClick={() =>
+                  setExpanded((prev) => ({
+                    ...prev,
+                    [node.name]: !prev[node.name],
+                  }))
+                }
+              >
+                {expanded?.[node.name] ? "-" : "+"}
+              </span>
+            )}
+            <span>{node.name}</span>
+            {expanded?.[node.name] && node?.children && (
+              <List list={node.children} /> //recursion concept
+            )}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+function App() {
+  const [data, setData] = useState(json);
+  return (
+    <div className="">
+      <h1 style={{ textAlign: "center" }}>Files and folder structure</h1>
+      <List list={data} />
+    </div>
+  );
+}
+
+export default App;

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript" href="./index.js"></script>
+  </head>
+
+  <body>
+    <style>
+      * {
+        font-family: "Courier New", Courier, monospace;
+      }
+    </style>
+    <h1 id="demo" style="text-align: center">
+      How To Convert Last Letter of String into Capital letter
+    </h1>
+
+    <script>
+      //first letter capital of word from string
+      var str = "hafeez";
+      var str1 = str.charAt(0).toUpperCase() + str.slice(1);
+      console.log(str1);
+
+      //Last letter capital of word from string
+      let str = "this is hafeez";
+      str = str.split(" ");
+      str = str.map((element) => {
+        return element.slice(0, -1) + element.slice(-1).toUpperCase();
+      });
+      str = str.join(" ");
+      console.log(str);
+
+      //Every first letter capital of word from string
+      var strWord = "i have a pen";
+      strWord = strWord.split(" ");
+      strWord = strWord.map((element) => {
+        return element.charAt(0).toUpperCase() + element.slice(1).toLowerCase();
+      });
+      strWord = strWord.join(" ");
+      console.log(strWord);
+    </script>
+  </body>
+</html>

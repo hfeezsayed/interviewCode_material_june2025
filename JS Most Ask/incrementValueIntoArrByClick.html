@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript" href="./index.js"></script>
+  </head>
+
+  <body>
+    <button onclick="submit()">Submit</button>
+    <input placeholder="name" id="name" />
+    <div id="frame"></div>
+
+    <script>
+      Names = [];
+      function submit() {
+        let inputValue = document.getElementById("name").value;
+        Names.push(inputValue);
+        let frame = document.getElementById("frame");
+        frame.innerHTML = `<div><h1>${Names}</h1></div>`;
+      }
+    </script>
+  </body>
+</html>

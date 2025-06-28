@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <title>Online HTML Editor</title>
+  <head> </head>
+  <body>
+    <p id="try">Online HTML Editor</p>
+    <div id="text"></div>
+
+    <!-- How to convert array to object -->
+    <script>
+      const arr = ["banana", "apple"];
+      let obj = arr.reduce((a, it, i) => ({ ...a, [i]: it }), {});
+      console.log(obj);
+    </script>
+
+    <!-- How to convert object to arr -->
+    <script>
+      const data = {
+        name: "Hafeez",
+        age: 29,
+        phone: 9821463305,
+      };
+      //let x = Object.keys(data);
+      //let x = Object.entries(data);
+      let x = Object.values(data);
+      console.log(x);
+    </script>
+  </body>
+</html>

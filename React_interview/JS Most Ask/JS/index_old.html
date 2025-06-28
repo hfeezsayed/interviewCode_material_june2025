@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" href="./index.js"></script>
+</head>
+
+<body>
+   
+   <!-- <p id="demo">{counter}</p>
+   <button onclick="add()">Increment</button>
+ -->
+  <!-- <script>
+    const person = [
+      {
+        id: 1,
+        name: "Hafeez"
+      },
+      {
+        id: 2,
+        name: "Salman"
+      },
+      {
+        id: 3,
+        name: "Mithun"
+      },
+      {
+        id: 2,
+        name: "Salman"
+      },
+    ]
+
+   const ids = person.map(o => o.id);
+   const filterPerson = person.filter(({id}, index) => !ids.includes(id, index + 1));
+   console.log(filterPerson)
+  </script> -->
+
+  <!-- <script>
+     function firstFunction(name, callback) {
+       console.log("Hi" + name);
+       callback();
+     }
+
+     function secondFunction() {
+       console.log("I am a callback function");
+     }
+
+
+     firstFunction("Hafeez", secondFunction)
+  </script> -->
+
+  <!-- <script>
+     function firstFunction(name) {
+       console.log("Hi" + name);
+     }
+
+     function secondFunction() {
+       console.log("I am a delay callback function, since setTimeout");
+     }
+
+
+     firstFunction("Hafeez")
+     setTimeout(secondFunction, 2000)
+  </script> -->
+
+  <script>
+    // function myFunction() {
+    //   let a = 4;
+    //   document.getElementById("demo").innerHTML = a * a;
+    // }
+    // myFunction();
+
+
+    // let a = 4; //a is a global varriable
+    // myFunction()
+    // function myFunction() {
+    //    document.getElementById("demo").innerHTML = a * a;
+    // }
+
+    // function myFunction() {
+    //   a = 10; //a is call always as a gloabl varriable
+    //   document.getElementById("demo").innerHTML = a;
+    // }
+    // myFunction();
+
+    
+   
+
+    // function add() { // Function to increment counter
+    //   let counter = 0;
+    //   document.getElementById("demo").innerHTML = counter =+ 1;
+    // }
+
+//    var person = [
+//   {
+//     id: 1,
+//     name: "Salman",
+//     age: 20,
+//     email: "salman@gmail.com"
+//   },
+//   {
+//     id: 2,
+//     name: "Haaris",
+//     age: 30,
+//     email: "Haaris@gmail.com"
+//   },
+//   {
+//     id: 2,
+//     name: "mithun",
+//     age: 20,
+//     email: "salman@gmail.com"
+//   }
+// ]
+
+
+// const ids = person.map(detail => detail.id);
+
+// const filterPerson = person.filter(({id}, index) => !ids.includes(id, index + 1));
+// console.log(filterPerson);
+
+
+//Higher Order function
+  // const interviewQuestions = (name) => {
+  //     if(name === 'Hafeez'){
+  //       return function(topic) {
+  //           console.log(`Hi ${name}. what is ${topic}?. please explian us.`)  
+  //       }
+  //     } else {
+  //       return function() {
+  //          console.log("Welcome user");
+  //       }
+  //     }
+  // }
+  // const candi1 = interviewQuestions("Hafeez");
+  // candi1("UI");
+  // candi1("UX");
+  // candi1("Java");
+
+
+  //Unshift method
+  let arr = [1, 2, 3, 4, 5]
+  arr.unshift(6);
+  //console.log(arr); // [6, 1, 2, 3, 4, 5]
+    
+
+//Spread Operator as Array
+  const arrSpread = [1, 2, 3, 4]
+  const arr1 = [...arrSpread, 5, 6]
+  console.log(arr1)
+
+//Spread Operator as Object 
+  const objSpread = {
+    a: 1,
+    b: 2,
+    type: "spread"
+  }
+
+  const objSpread1 = {
+    ...objSpread,
+    name: "spread with object"
+  }
+  
+  console.log(objSpread1);
+
+
+
+  
+  </script>
+
+
+
+
+
+  
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Insert Element</title>
+
+    <!-- <script>
+        //1 How to insert the element as per the postion into array.
+        let arr = [10, 59, 15, 52, 36, 21];
+        let newEle = 70;
+        let postion = 3;
+        for(let i = arr.length-1; i >= 0; i--) {
+            console.log(arr[i])
+            if(i>= postion) {
+                arr[i + 1] = arr[i];
+                if(i === postion) {
+                    arr[i] = newEle
+                }
+            }
+        }
+        console.log(arr)
+    </script> -->
+
+    <!-- <script>
+      function insertEle() {
+        let arr = [10, 59, 15, 52, 36, 21];
+        let newEle = document.getElementById("newEle").value;
+        let position = document.getElementById("position").value;
+        for (let i = arr.length - 1; i >= 0; i--) {
+          console.log(arr[i]);
+          if (i >= position) {
+            arr[i + 1] = arr[i];
+            if (i == position) {
+              arr[i] = newEle;
+            }
+          }
+        }
+        console.log(arr);
+      }
+    </script> -->
+
+    <!-- Insert the value as per position into array using SPLICE method-->
+    <script>
+      let data = [10, 93, 52, 31, 75];
+      data.splice(2, 0, 1000);
+      console.log(data);
+    </script>
+  </head>
+  <body>
+    <input type="text" id="position" placeholder="Enter postion" />
+    <input type="text" id="newEle" placeholder="Enter insert value" />
+    <button onclick="insertEle()">Insert Element</button>
+  </body>
+</html>

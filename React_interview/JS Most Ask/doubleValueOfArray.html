@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" href="./index.js"></script>
+</head>
+
+<body>
+    
+   
+<script>
+//1st way
+  const arr = [2, 3, 4, 5];
+  const doubledArr = arr.map((num) => {
+    return num * 2
+  })
+  console.log(doubledArr)//[4, 6, 8, 10]
+
+
+//2nd way
+  const arr1 = [2, 3, 4, 5];
+  const newVal = Array.from(arr1, it => it * 2);
+  console.log(newVal)  
+
+</script>
+</body>
+
+</html>

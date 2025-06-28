@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript" href="./index.js"></script>
+  </head>
+
+  <body>
+    <style>
+      * {
+        font-family: "Courier New", Courier, monospace;
+      }
+    </style>
+    <h1 id="demo" style="text-align: center">How To Use Callback Function</h1>
+
+    <script>
+      //Promise example
+
+      function myFunc(some) {
+        console.log(some);
+      }
+
+      let myPromise = new Promise((myResolve, myReject) => {
+        let x = 0;
+        if (x == 0) {
+          myResolve("OK");
+        } else {
+          myReject("Error");
+        }
+      });
+      myPromise.then(
+        function (value) {
+          myFunc(value);
+        },
+        function (error) {
+          myFunc(error);
+        }
+      );
+    </script>
+  </body>
+</html>

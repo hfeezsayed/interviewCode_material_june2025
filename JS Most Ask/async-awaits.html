@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" href="./index.js"></script>
+</head>
+
+<body>
+   <h1>Async awaits</h1>
+   <p>Async & awaits return promise</p>
+   <p>Async print also promise without using .then() and .catch()</p>
+
+   <p>Await wait for promise to return</p>
+   <p>Await not work without async</p>
+
+
+<script>
+   //Updated example of async and awaits
+
+   let myPromises = new Promise((resolve, reject) => {
+       setTimeout(() => {
+          let value = 10;
+          if(value > 11) {
+            resolve("Promise fullfilled")
+          }else {
+            reject('Promises rejected')
+          }
+       }, 3000)
+   })
+
+   const check = async () => {
+       let data = await myPromises; //till the promises not exexute wait for it.
+       console.log("Executing")
+       console.log(data)
+    }
+    let a = check()// it will pending till 4 seconds.
+    console.log(a)
+
+</script>
+
+
+<!-- <script>
+  //Old method example 
+  function myFunc(some) {
+  console.log(some)
+}
+
+let myPromise = new Promise((myResolve, myReject) => {
+     let x = 0;
+     if(x == 0) {
+        myResolve("OK");
+     } else {
+        myReject("Error");
+     }   
+})
+myPromise.then(
+   function(value) {myFunc(value)},
+   function(error) {myFunc(error)}
+)
+</script> -->
+</body>
+
+</html>

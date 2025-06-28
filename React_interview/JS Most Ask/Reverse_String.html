@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" href="./index.js"></script>
+</head>
+
+<body>
+    <style>
+        * {
+            font-family:'Courier New', Courier, monospace;
+        }
+    </style>
+   <h1 id="demo" style="text-align: center;">How To Normal String Convert into Reverse String</h1>
+   
+<script>
+//Method 1    
+let str1 = "Welcome To Mumbai";
+const reverseString = () => {
+    let splitStr = str1.split(" ");
+    let revStr = splitStr.reverse();
+    return revStr.join(" ");
+   }
+   console.log(reverseString());
+
+
+  
+//Method 2   
+const str = "Hafeez Ali";
+function reverseStr() {
+  var newString = "";
+  for(var i = str.length - 1; i >= 0; i--) {
+    newString += str[i];
+  }
+  return newString
+}
+console.log(reverseStr())
+
+
+
+//Method 3   
+const strng = "Hafeez Ali";
+function reverseStr(strng) {
+  return (strng === '') ? '' : reverseStr(strng.substr(1)) + strng.charAt(0)
+}
+console.log(reverseStr(strng))
+
+
+</script>
+</body>
+
+</html>

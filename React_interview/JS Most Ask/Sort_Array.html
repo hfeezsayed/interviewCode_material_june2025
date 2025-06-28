@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript" href="./index.js"></script>
+  </head>
+
+  <body>
+    <style>
+      * {
+        font-family: "Courier New", Courier, monospace;
+      }
+    </style>
+    <h1 id="demo" style="text-align: center">How To Use Sort Array</h1>
+
+    <script>
+      //Sort array without using sort method
+      //Example 1
+      var arr = [30, 50, 10, 20, 5];
+      for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+          if (arr[i] > arr[j]) {
+            temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+          }
+        }
+      }
+      //console.log(arr)
+
+      //Sort array using sort method
+      //Example 1
+      var arrNum = [30, 50, 10, 20, 5];
+      arrNum.sort(function (a, b) {
+        return a - b;
+      });
+      console.log(arrNum);
+    </script>
+  </body>
+</html>

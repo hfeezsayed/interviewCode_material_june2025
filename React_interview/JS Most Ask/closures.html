@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" href="./index.js"></script>
+</head>
+
+<body>
+   <p id="demo">Bismillah</p>
+   
+<script>
+ // CLOSURE
+ //Closure is the combination of a function bundled together.
+ //Closure is an inner function that can access to the outer function variable from inner function.
+ //but outer function can not access to the inner function that is called closure
+
+
+ //Example 
+ function outerFunc() {
+    var x = 10; // outer variable
+    function innerFunc() { // inner function 
+        var y = 20;
+        console.log(x);
+    }
+    innerFunc()
+ }
+ outerFunc();
+
+</script>
+</body>
+
+</html>

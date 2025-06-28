@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" href="./index.js"></script>
+</head>
+
+<body>
+    <style>
+        * {
+            font-family:'Courier New', Courier, monospace;
+        }
+    </style>
+   <h1 id="demo" style="text-align: center;">How To Use Callback Function</h1>
+   
+<script>
+//A callback is a function passed as an argument to another function
+//This technique allows a function to call another function
+//A callback function can run after another function has finished
+//The advantage of an anonymous function is that it does not have to be stored in a separate file.
+
+
+//Example 1
+//  function sum(a, b) {
+//     console.log(a + b)
+//  }
+//  sum(2, 3)
+
+
+//Example 2
+function hrCall(callBack) {
+    console.log("Call To HR");
+    setTimeout(() => {
+       callBack()
+    }, 3000)
+}
+
+function dirCall() {
+    console.log("Call To The Director")
+}
+hrCall(dirCall)
+</script>
+</body>
+
+</html>

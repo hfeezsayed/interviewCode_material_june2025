@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Practise</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" href="./index.js"></script>
+</head>
+
+<body>
+    <style>
+        * {
+            font-family:'Courier New', Courier, monospace;
+        }
+    </style>
+   <h1 id="demo" style="text-align: center;">How To Use Splice Method</h1>
+   <p>The Array.splice() method adds and removes array elements:</p>
+   
+<script>
+//How to add the element as per indexing
+   let data = ["Banana", "Orange", "Kiwi", "Apple"];
+   data.splice(2, 0, "Grapes", "Guava")
+   console.log(data)
+
+
+//How to remove the element as per indexing
+//2 is a position
+//1 means one item would be delete like kiwi
+let arr = ["Banana", "Orange", "Kiwi", "Apple"];
+   arr.splice(2, 1, "Grapes", "Guava")
+   console.log(arr)   
+</script>
+</body>
+
+</html>

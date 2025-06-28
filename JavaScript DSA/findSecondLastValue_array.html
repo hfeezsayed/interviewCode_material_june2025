@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to find second last value from array</title>
+
+    <script>
+      const arr = ["a", "b", "c", "d"];
+      const arr1 = arr[arr.length - 3];
+      console.log(arr1);
+    </script>
+
+    <script>
+      //1. 33 bcoz: because the + operator, when used with a number and a string,
+      // it performs string concatenation rather than addition
+      console.log(3 + "3");
+
+      //2. 0 bcoz in the js 'string will be converted into number before substraction
+      console.log(3 - "3");
+
+      //3. 333 becoz if first value is string then it will be converted all rest into the string
+      console.log("3" + 3 + 3);
+    </script>
+  </head>
+  <body></body>
+</html>

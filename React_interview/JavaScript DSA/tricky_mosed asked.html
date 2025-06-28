@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding</title>
+
+    <script>
+      //How to find the total price of the products?
+      let arr = [
+        { product: "Milk", quantity: 3, Price: 1.5 },
+        { product: "Burger", quantity: 2, Price: 2.5 },
+      ];
+
+      let sum = 0;
+      for (let i = 0; i < arr.length; i++) {
+        sum += arr[i].quantity * arr[i].Price;
+      }
+      console.log(sum);
+    </script>
+
+    <script>
+      //with the var the output will be 10 10 10..... because var is global scope so it will be 10
+      // with the let the output will be 0, 1, 2, 3...9 because let is a function scope
+      for (var i = 0; i < 10; i++) {
+        setTimeout(() => {
+          console.log(i);
+        }, 1000);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
